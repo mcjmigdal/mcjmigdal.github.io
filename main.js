@@ -2,10 +2,10 @@ var myImage = document.querySelector('img');
 
 myImage.onclick = function() {
 	var mySrc = myImage.getAttribute('src');
-	if (mySrc == 'images/kot.png') {
-		myImage.setAttribute('src', 'images/kot2.jpe');
+	if (mySrc == 'kot.png') {
+		myImage.setAttribute('src', 'kot2.jpe');
 	} else {
-		myImage.setAttribute('src', 'images/kot.png');
+		myImage.setAttribute('src', 'kot.png');
 	}
 }
 
