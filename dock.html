@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title>Molecular Docking</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<style type="text/css">
+
+/*
+*   math2html: convert LaTeX equations to HTML output.
+*
+*   Copyright (C) 2009,2010 Alex Fernández
+*
+*   Released under the terms of the `2-Clause BSD license'_, in short:
+*   Copying and distribution of this file, with or without modification,
+*   are permitted in any medium without royalty provided the copyright
+*   notice and this notice are preserved.
+*   This file is offered as-is, without any warranty.
+*
+* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
+*
+*   Based on eLyXer: convert LyX source files to HTML output.
+*   http://elyxer.nongnu.org/
+*/
+/* --end--
+* CSS file for LaTeX formulas.
+*/
+
+/* Formulas */
+.formula {
+	text-align: center;
+	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+	margin: 1.2em 0;
+}
+span.formula {
+	white-space: nowrap;
+}
+div.formula {
+	padding: 0.5ex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Basic features */
+a.eqnumber {
+	display: inline-block;
+	float: right;
+	clear: right;
+	font-weight: bold;
+}
+span.unknown {
+	color: #800000;
+}
+span.ignored, span.arraydef {
+	display: none;
+}
+.formula i {
+	letter-spacing: 0.1ex;
+}
+
+/* Alignment */
+.align-left, .align-l {
+	text-align: left;
+}
+.align-right, .align-r {
+	text-align: right;
+}
+.align-center, .align-c {
+	text-align: center;
+}
+
+/* Structures */
+span.overline, span.bar {
+	text-decoration: overline;
+}
+.fraction, .fullfraction {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.fraction .fraction {
+	font-size: 80%;
+	line-height: 100%;
+}
+span.numerator {
+	display: block;
+}
+span.denominator {
+	display: block;
+	padding: 0ex;
+	border-top: thin solid;
+}
+sup.numerator, sup.unit {
+	font-size: 70%;
+	vertical-align: 80%;
+}
+sub.denominator, sub.unit {
+	font-size: 70%;
+	vertical-align: -20%;
+}
+span.sqrt {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.1ex;
+}
+sup.root {
+	font-size: 70%;
+	position: relative;
+	left: 1.4ex;
+}
+span.radical {
+	display: inline-block;
+	padding: 0ex;
+	font-size: 150%;
+	vertical-align: top;
+}
+span.root {
+	display: inline-block;
+	border-top: thin solid;
+	padding: 0ex;
+	vertical-align: middle;
+}
+span.symbol {
+	line-height: 125%;
+	font-size: 125%;
+}
+span.bigsymbol {
+	line-height: 150%;
+	font-size: 150%;
+}
+span.largesymbol {
+	font-size: 175%;
+}
+span.hugesymbol {
+	font-size: 200%;
+}
+span.scripts {
+	display: inline-table;
+	vertical-align: middle;
+}
+.script {
+	display: table-row;
+	text-align: left;
+	line-height: 150%;
+}
+span.limits {
+	display: inline-table;
+	vertical-align: middle;
+}
+.limit {
+	display: table-row;
+	line-height: 99%;
+}
+sup.limit, sub.limit {
+	line-height: 100%;
+}
+span.symbolover {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 100%;
+	bottom: 0.5em;
+	width: 0px;
+}
+span.withsymbol {
+	display: inline-block;
+}
+span.symbolunder {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 80%;
+	top: 0.3em;
+	width: 0px;
+}
+
+/* Environments */
+span.array, span.bracketcases, span.binomial, span.environment {
+	display: inline-table;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0em;
+	vertical-align: middle;
+}
+span.arrayrow, span.binomrow {
+	display: table-row;
+	padding: 0ex;
+	border: 0ex;
+}
+span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
+	display: table-cell;
+	padding: 0ex 0.2ex;
+	line-height: 99%;
+	border: 0ex;
+}
+/*
+* CSS file for LaTeX formulas, extra stuff:
+* binomials, vertical braces, stackrel, fonts and colors.
+*/
+
+/* Inline binomials */
+span.binom {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 80%;
+}
+span.binomstack {
+	display: block;
+	padding: 0em;
+}
+
+/* Over- and underbraces */
+span.overbrace {
+	border-top: 2pt solid;
+}
+span.underbrace {
+	border-bottom: 2pt solid;
+}
+
+/* Stackrel */
+span.stackrel {
+	display: inline-block;
+	text-align: center;
+}
+span.upstackrel {
+	display: block;
+	padding: 0em;
+	font-size: 80%;
+	line-height: 64%;
+	position: relative;
+	top: 0.15em;
+
+}
+span.downstackrel {
+	display: block;
+	vertical-align: bottom;
+	padding: 0em;
+}
+
+/* Fonts */
+span.mathsf, span.textsf {
+	font-style: normal;
+	font-family: sans-serif;
+}
+span.mathrm, span.textrm {
+	font-style: normal;
+	font-family: serif;
+}
+span.text, span.textnormal {
+	font-style: normal;
+}
+span.textipa {
+	color: #008080;
+}
+span.fraktur {
+	font-family: "Lucida Blackletter", eufm10, blackletter;
+}
+span.blackboard {
+	font-family: Blackboard, msbm10, serif;
+}
+span.scriptfont {
+	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+	font-style: italic;
+}
+
+/* Colors */
+span.colorbox {
+	display: inline-block;
+	padding: 5px;
+}
+span.fbox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 2px;
+}
+span.boxed, span.framebox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 5px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="document" id="molecular-docking">
+<h1 class="title">Molecular Docking</h1>
+
+<dl class="docutils">
+<dt>::</dt>
+<dd>Goals of my presentation
+- introduce and brefly explain terms like docking and virtual screening
+- present applications of molecular docking in different fields of science
+- introduce basic concepts some docking alghoritms like one very basic and one more advanced
+- present worked example of molecular docking using swiss-dock serwer
+- show how vast number of docking programs is avaible and how hard it is to choose one. Also show that cos tam.
+- show some example of recent paper where docking technique was used.</dd>
+</dl>
+<div class="section" id="brief-overview-what-is-molecular-docing">
+<h1>Brief overview - What is molecular docing?</h1>
+<p>Molecular docking is a technique/method used to predict structure of the intermolecular complex, formed between two or more molecules. <a class="footnote-reference" href="#id29" id="id1">[1]</a> Those molecules could be ligand
+and some protein, but also complex of two proteins. The docking problem may be
+formally stated as falows: <em>Let A,B be two molecules, than we would like to find a
+transformation T that the score measuring the quality of the
+proposed docking solution is maximized</em>. <a class="footnote-reference" href="#id30" id="id2">[2]</a> Looking at this definition we can find
+two key indigridents in molecular docking: transformation - so we need  a way to
+generate or explore different structures of complex between two molecules, and a score
+that will tell us which of those structures is best. Before we look into these in more
+detail, I would like to tell more about what is molecular docking exacely by looking
+at some examples of its usage.</p>
+</div>
+<div class="section" id="applications-it-s-not-only-drug-design-tool">
+<h1>Applications - it's not only drug design tool</h1>
+<p>Molecular docking is most widely used in field of drug design, to find/propose the binding mode of protein inhibitors. <a class="footnote-reference" href="#id29" id="id3">[1]</a> However it's applications examples can be also found in other fields some of them are:</p>
+<ul class="simple">
+<li>nanotechnology it is used to deduce orientation of protein on nanoscale surfaces, which appears to be quite important when integrating preoteins into nano-devices.
+(Przyk³ady trzeba znalezc nie ma tak latwo: Leszczynski &amp; Puzyn, 2012, Sun, et al. 2014, Okoli et al 2013)</li>
+<li>Study of antifoulers interactions ( <a class="footnote-reference" href="#id32" id="id4">[4]</a>)</li>
+<li>Study of Nutraceuticals Interactions ( <a class="footnote-reference" href="#id32" id="id5">[4]</a> well described)</li>
+<li>Study of Fatty acids biosythesis (Chandrakar et al 2013, Anthony et al 2015, Deepa et al 2010)</li>
+<li>Bioremediation ( <a class="footnote-reference" href="#id32" id="id6">[4]</a>, ale tez Sridhar &amp; Chandra 2014,Vieira et al 2015)</li>
+</ul>
+<p>Lets take a closer look for some of these.</p>
+<div class="section" id="anti-biofouling">
+<h2>(Anti)biofouling</h2>
+<p>Biofouling is the process of accumulation of microorganisms, plants, algae, or animals on wetted surfaces.
+This phenomena presents a significant problem especially in marine industry, where buildup of
+biofouling leads to higher fuel consumption and even destruction of vessel.[3]_ Because the
+group of fouling agents is quite diverse designing specific antifouling agent is not so easy.
+One of very potent antifouling agents was butenolide 1, and though it's antifouling activity was
+validated no informations aobut it's mode of action were available. This problem find it
+solution in molecular docking which provided answers and showed that butanolide acts in quite
+different way on different fouling agents eg. In <em>Balanus amphitrite</em> it coused distrupion of ketone body
+synthesis, or in close relative <em>Balanus neritina</em> it disrupted lipid metabolism. (2012study). The above study provided exhaustive insight into antifouling agents and their mechanism of action. <a class="footnote-reference" href="#id32" id="id7">[4]</a></p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>Nanotechnology
+One of fields in which nanotechnology is being implemented is design and validation
+of biosensors. A variey of nanoparticles are available like silca, gold. The deduction
+of orientation of protein on nanoscale surfaces finds vital insinuations in
+integrating proteins onto micro and nonofabricated devices. Although, nanoparticles
+have been successfully implemented by the scientific community in terms of structure,
+stability and activity of proteins attached on the surface of nanomaterial. yet understanding
+the mode of action and the binding of these nanoparticlles to their specified target
+is still subject to discussion, which is greatly answered by computional tools, incuding
+molecular docking.
+Molecular docking use example: A hybrid system containing a protein-fuctionalised nanoparticle
+for a protein from Moringa oleifera, which possesses anti-coagulant and anit-microbal proberties
+has been prepared. Yet becouse of scare information on this protein molecular docking as well as
+MM was employed to unravel them. Using knowlege gained throu this computional experiments sciencist
+gain knowlage about nature of interaction within binding site that let them successfully design
+suitable nanoparticle for this hybrid system. (Okoli et al 2013) <a class="footnote-reference" href="#id32" id="id8">[4]</a></dd>
+</dl>
+<dl class="docutils">
+<dt>::</dt>
+<dd>Biodegradation
+Synthetic dyes such as azo or trienylomethane are being widely used in
+today industry. Alarming rates of release of coloured compounds into the
+environment poses a serous thret to the ecological balance especially to
+marine fauna as these dyes act as chemical mutagens. This drives studes
+of finding ways to biodegradate those chemicals. One of the enzyme capaple
+of doing this is triphenylmethane reductase produced by Citrobacter sp.,
+and it was found that it is more active towards malachite green. Molecular
+docking was the technique employed to investigate mechanism under this
+process and was able to succesfuly predic and characterize binding pocket
+of triphenylmethane reductase therby facilitating better understanding of
+the enzyme behaviour. This example shows how the use of computional tools,
+like molecular docking could prove benefical in unravelling novel methods of
+bioremediation. <a class="footnote-reference" href="#id32" id="id9">[4]</a></dd>
+</dl>
+</div>
+<div class="section" id="study-of-fatty-acid-biosynthesis">
+<h2>Study of Fatty Acid Biosynthesis</h2>
+<p>Interest in fatty acid biosynthesis recently has been growing due to
+biofuels which are emerging as a potent replacment to fossil fuels. Especially microalgae are being considered as an extremely potential source, considering the
+high amounts of lipids they could acumulate in theirs cells. As it appears two enzymes are important for this process: FabH involved
+in elongating the fatty acids chains, and acyl carrier protein (ACP) which catalyses the
+transfer of fatty acids intermediates to the
+active sites of FabH. Moleular modeling followed by molecular docking studies of the interaction
+mechanism between those two revealed strong hydrogen bonding between the two proteins.
+Moreover specific residues involved in this interactions were unrevealed. Hence, this
+ilustrates how computation chemistry approaches can be implemnted is such studies and
+also in designing mutation studies that could be vital in increasing the synthesis of biolipids
+in algae -- what is currently a goal in this field.(Misra, Patra, Panda, Sukla 2013). <a class="footnote-reference" href="#id32" id="id10">[4]</a> Also notice that this is example of protein - protein docking usage.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>Study of Nutaceutical Interactions
+Nutraceuticals are -
+The role of digestive nezymes in breaking macromolecules present in food into smaller units
+has been elaborately studied and docuented. The intervention of theese enzymes is pivotal in
+for example afcilitating the adsorption of food particles. Example use of docking in this
+field is studing relations between inhibiting ability of some nutaceuticals an inhibiting
+factors causing prostae cancer. <a class="footnote-reference" href="#id32" id="id11">[4]</a>
+Neutraceuticals is a broad term that is used to describe any product derived from food sources
+with extra health benefits in addition to the basic nutritional value.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="how-it-work-s">
+<h1>How it work's</h1>
+<p>As I already have told before.
+The docking procedure, or so called <em>docking problem</em>, can be divided into two:</p>
+<ol class="arabic simple">
+<li>Prediction of the intermolecular complex structure</li>
+<li>Evaluation of the generated structure <a class="footnote-reference" href="#id29" id="id12">[1]</a></li>
+</ol>
+<p>(1)The most intuitive approach to the first problem would be a <em>hands-on</em> approach (according to Leach) which requires a good idea of the expected binding mode, for example we already know the binding mode of a closely related ligand. However, it has been showed that even very similar inhibitors might adopt quite different binding modes. Moreover if one would want to dock large number of inhibitors by hand it would cost lot of time, not to mention that human modelers can be biased and programs usually can consider many more possibilities. <a class="footnote-reference" href="#id29" id="id13">[1]</a></p>
+<p>The second problem comes from the fact that usually there are no simple answers and most docking algorithms generates a large number of possible structures, thus we need a way to score those different possibilities in order to select a single one. <a class="footnote-reference" href="#id29" id="id14">[1]</a></p>
+</div>
+<div class="section" id="docking-alghoritms-prediction-of-ligand-pose">
+<h1>Docking alghoritms -- prediction of ligand pose</h1>
+<div class="section" id="how-complex-the-docking-problem-is">
+<h2>How complex the <em>docking problem</em> is?</h2>
+<p><em>Docking problem</em> involves many degrees of freedom:</p>
+<ul class="simple">
+<li>six degrees of translational and rotational freedom of one molecule relative to other</li>
+<li>conformational degrees of freedom of <strong>each</strong> molecule</li>
+</ul>
+<p>Such a large number of df, makes considering all of them probably impossible.
+Thus many different strategies have been devised to deal with that problem.
+Those strategies or alghoritms, can be characterized according to the number of df that they ignore. <a class="footnote-reference" href="#id29" id="id15">[1]</a></p>
+<p><em>The simplest alghoritm treats the two molecules as rigid bodies and explores only the six degrees of
+translational and rotational freedom</em> <a class="footnote-reference" href="#id29" id="id16">[1]</a> More advanced method could treat one molecule
+as rigid and other as flexible and so on.</p>
+</div>
+<div class="section" id="dock-one-of-earlies-alghoritm-example">
+<h2>DOCK - one of earlies alghoritm example</h2>
+<p>Dock is one of the first docking alghoritms and a example of most simple one.
+This program was created in 1982 by Kuntz and co-workers, (<em>note there were
+even earlier attempts</em>) it was designed to find molecelues with a huge
+degree of shape complementarity to the binding site and this idea of using shape complementarity
+between two bodies is beeing inherited also by other newer programs.</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>To do so it first derives a 'negative image' of the
+binding site from the molecular surface of the macromolecule. This negative image consist of collection of
+overlapping spheres of varying radii, each of which touches the molecular surface at just two points. <a class="footnote-reference" href="#id29" id="id17">[1]</a>
+Next stage is to look for clusters of those spheres, the existence of this kind of clusters indicates the
+existance of a cavity in the molecular surface, which is considered to be a good docking site. <a class="footnote-reference" href="#id30" id="id18">[2]</a> Ligand
+atoms are then matched to the sphere centers to find sets of ligand atoms in which all the distances between the
+atoms in the set are equal to the corresponding sphere centre-sphere centre distances ( <em>with some user
+predefined tollerance</em>). <a class="footnote-reference" href="#id29" id="id19">[1]</a> This is done only by translations and rotations. <a class="footnote-reference" href="#id30" id="id20">[2]</a> The ligand can then be oriented withing the site by performing a least-squeres fit of
+the atoms to the sphere centers, then orientation is checked to ensure there are o unacceptable steric
+interactions between the ligand and the receptor. If the orientation is acceptable then an interaction energy
+is computed to give the 'score' for that binding mode. New orientations are generated by matching different
+sets of atoms and sphere centers. The top-scoring orienations are retained for subsequent analysis. <a class="footnote-reference" href="#id29" id="id21">[1]</a>
+The main feature that should be noted here is that whole docking procedure is based
+on shape complementarity between two bodies.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="flexible-docking-alghoritms">
+<h1>Flexible docking alghoritms</h1>
+<p>As people tried to improve prediction capabilities of docking software they devised flexible docking. Performing conformationally flexible docking requires taking into account conformational df.
+Many of the methods tries to deal with this problem by considering only the conformational space of
+the ligand, while receptor is assumed to be rigid. <a class="footnote-reference" href="#id29" id="id22">[1]</a>  Hopefully to those programs this assumption of protein ridigity is often a fair aproximaton, as protein usually doesnt change much on binding ligand.
+Thus this comes to a similar problem as searching a optimal conformation.There are number of algorithms used to solve this kind of
+problem and their are used in  molecular docking as well includong Monte Carlo, genetic algorithms, distance geometry,ant-colony optimization, etc.,
+there is quite a number of these in fact and probably all of them have been used in some program. <a class="footnote-reference" href="#id29" id="id23">[1]</a></p>
+<p>Although I sad that many programs consider only conformational space of ligand, this is not true for all of
+them. In fact number of programs that includes flexibility of protein and ligand is quite large already,
+however the degree to which proteins are consider flexible is varying from side-chains only in some part of
+protein to full protein flexibility. For example GalaxyDock accounts for protein flexibility of
+pre-selected residues, RosettaLigand implements full protein backbone and side-chain
+flexibility and even posibility to simultaneous dock multiple ligands. AutoDock takes into
+account flexibility by separating choosen side chains and making them part of ligand input. An
+so on numbers of different solutions are possible today (cIFD, RosettLigand, AutoDock, AutoDock Vina).[7]_</p>
+<pre class="literal-block">
+Methods combining docking with molecular dynamics are also available. Those are used when no
+crystallographic data is available for a given target. In these approach accepted view is that
+greater sampling of biomolecular space is desirable to find optimal solution. But the main
+obstacle is short timescale accessible to MD simulations. These are tried to be overcome by
+increasing speed and efficiency of both algorithms and computer hardware (ex. GPU accelerated
+computing). One such example is MM2QM tool which allowed combining the docking, MD, MM and QM
+calculations for either generation of alternative protein receptor conformations or
+optimization of final docked structures. [7]_
+</pre>
+<pre class="literal-block">
+For example, **Monte Carlo** methods have been used to perfom molecular docking, often in conjunction with
+ simulated annealing. In this method at each iteration the interal conformation of the ligand is changed
+ (by rotating about a bond) or the entire molecule is randomly translated or rotated. The energy of the
+ ligand in the binding site is calculated using molecular mechanics and the move is then accepted or
+ rejected.[1]_
+</pre>
+<pre class="literal-block">
+Another example is the use of genetic algorithms, in this approach each chromosome codes not only for the
+internal conformation of the ligand but also for the orientation of the ligand within the receptor site. Both
+the orientation and the internal conformation will thus vary as the population evolve - the score of each
+docked structure within the site acts as the fitness function used to select the individuals for the next
+iteration. [1]_
+
+Before you can use genetic alghortim to solve a problem you must find a way to encode
+any potential solution to that problem using binary bit string, which is refered as
+a chromosome.
+At the begining large number of random chromosomes are generated, and each one
+presents a potential, yet random, solution to the problem.
+Then each chromosome is scored on how good it solves the problem using fitness funtion
+Than selectad pairs from the current population are choosen based on this score
+to survive to the next population, in the same time offspring population is being
+generated from those choosen. During generation processes like crossover and mutation
+are beeing mimic.
+</pre>
+<dl class="docutils">
+<dt>::</dt>
+<dd>Ant colony optimization, in this method set of software agents called artifical ants
+search for good solution to a given optimization problem. To apply this methodology
+problem has to be first tranformed into problem of finding the best path on weighted
+graph. Then the ants incrementally build solution by moving on the graph.</dd>
+</dl>
+<pre class="literal-block">
+Distance geometry can be used to perform molecular docking. The major problem to be addressed with this method
+is to find a way to generate confomations of the ligand wihtin the binding site. One way to achieve this is by
+using a modified penalty function that forces the ligand conformation to remain within the binding site. For
+example, and additional penalty term can be added which has the effect of forcing the ligand to lie in the
+DOCK-derived cluster of spheres that represents the binding site. [1]_
+
+Finding coordinates of set of points by using the distances between some pairs of
+such points.
+</pre>
+<pre class="literal-block">
+Another approach used by many programs involves the incremental construction of the ligand. This is similar in
+spirit to the depth-first systematic conformational search. The main difference is that in docking the
+ conformational search is performed within the binding site. Typical incremental construction algorithm first
+identifies one or more `base fragments` within the ligand. These base fragments are often chosen to be
+reasonably significant, fairly rigid part of the molecule such as a ring system. The base frament(s) are
+docked into the binding site and may then be clustered to remove similar orientations. Each docked orientation
+of the base fragment then represents starting point for the conformational analysis of the rest of the ligand.
+This approach might be quite time consuming - since it is necessary to perform the conformational analysis for
+each orientation of the base fragments. However, it is often found that the protein provides a particulary
+useful constraint, enabling the search tree to be pruned very effectively. [1]_
+</pre>
+</div>
+<div class="section" id="more-theory-scoring-functions-for-molecular-docking">
+<h1>More theory - scoring Functions for Molecular Docking</h1>
+<p>Docking algorithms are generally capable to generate a large number of potential solutions.
+Some of these can be rejected immediately because they have a high-energy clash with the
+protein. But the remainder must be somehow assessed - this is done using scoring function. We
+should consider two situations when we scoring functions are used: <a class="footnote-reference" href="#id29" id="id24">[1]</a></p>
+<ol class="arabic simple">
+<li>We are interested in how a single ligand binds to the protein</li>
+<li>We are interested in docking large number of molecules to protein of interest and deciding which one is the best match - virtual screening (VS).</li>
+</ol>
+<p>a) In the first situation, scoring function must be able to identify the <cite>true</cite> docking mode of
+a given ligand, moreover this scoring function should be calculated rapidly because of large
+number of orientations that may be generated during docking run.
+b) However in second case, when docking more than one molecule -- say database of molecules, it
+also needs to be able to rank one ligand relative to another. <a class="footnote-reference" href="#id29" id="id25">[1]</a></p>
+<p>Most commonly used are emiprical based scoring functions, they usually take into account the
+size of the contact surface between the two molecules and they do not allow one molecule to penetrate
+the other. They also tries to approximate the ligand-receptor binding energy using very fast
+and approximate method. Usually those consider free energy of binding written as an additive
+equation of various additive components to reflect various contribution to binding, example
+of how such equation could look like is presented at the slide.[2]_</p>
+<p><span class="formula">Δ<i>G</i><sub><i>bind</i></sub> = Δ<i>G</i><sub><i>solvent</i></sub> + Δ<i>G</i><i>conf</i> + Δ<i>G</i><sub><i>int</i></sub> + Δ<i>G</i><sub><i>rot</i></sub> + Δ<i>G</i><sub><i>t</i> ⁄ <i>r</i></sub> + Δ<i>G</i><sub><i>vib</i></sub></span></p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>where <span class="formula">Δ<i>G</i><sub><i>solvent</i></sub></span> is the contribution due to solvent effects, arising from the
+balance of interactions between the solvent and the ligand, protein and intermolecular complex. <span class="formula">Δ<i>G</i><sub><i>conf</i></sub></span> arises from confromational changes in the protein and in the ligand.
+In many cases protein does not change much on binding - luckly for most docking methods assuming
+a rigid receptor. <span class="formula">Δ<i>G</i><sub><i>int</i></sub></span> is the free energy due to specific protein-ligand
+interactions. <span class="formula">Δ<i>G</i><sub><i>rot</i></sub></span> is the free energy loss associated with freezing internal
+rotation of the protein and the ligand. Simpply each rotatable bond can be in three states
+(trans and +/- gauche), thus freezing each rotatable bond leads to RTln3 free energy loss.
+<span class="formula">Δ<i>G</i><sub><i>t</i> ⁄ <i>r</i></sub></span> is the loss in translational and rotational free energy caused by the
+association of two bodies to give a single body. <span class="formula">Δ<i>G</i><sub><i>vib</i></sub></span> is thefree energy due to
+changes in vibrational modes. <a class="footnote-reference" href="#id29" id="id26">[1]</a></dd>
+</dl>
+<p>As you may notice good scoring function is crucial both for docking single molecule as for VS.
+With out good scoring function even if alghoritm behind docking allows to explore great number of binding
+poses it wont be able to choose a proper one correctly or rank different ligands based. Empirical functions
+about which I have told you are still beeing developed and it is mainly concerned with one or more term
+contributing on overall binding affinity.</p>
+<p>There are however also atmepts to use higher-level theories such as QM. A major limitation is of course
+computational cost of first-principles calculations, nontheless some development is taking place in this area
+ex. Rao et al. derived such scorring functionand tested it on two sets of molecules with satisfatorily results.</p>
+<p>Yet as for now none methodology is superior and docking programs tends to be target specific. So it is resonable
+when choosing docking program to try out more than one.</p>
+</div>
+<div class="section" id="docking-in-drug-design-virtual-screening-so-i-can-connect-it-some-how-with-my-work">
+<h1>Docking in drug design -- virtual screening so I can connect it some how with my work</h1>
+<dl class="docutils">
+<dt>::</dt>
+<dd><p class="first">Polish example - Fail
+Research by M. Bajda and others from Jagiellonian University was focused on
+acetlcholinesterase, enzyme responsible for acetlcholine hydrolisis in cholinergic
+synapses. According to one of hypothesis on Alzheimer's disease many symptoms of
+dementia are connected with low levels of acelcholine -- thus inhibitors of that enzyme
+are search as the potential drug against AD. Currently, three are 4 of those at the
+market (tacrine was first).</p>
+<p class="last">The aim of the study was to find more potent drug via virtual scanning techniques and
+ZINC database. The ZINC database is a free data set of commercially available compounds,
+frequently used to vritual screening. In contains over 35 million compounds. The VS
+done reasearchers was done in a multi-step manner. First they chosen only those compunds
+that had important physicochemical properties like proper absorption and distribution
+to central nervous system. In the next step they used information on structure of
+acetylcholinoesterase in complexes with four different inhibitors to create a
+pharmacophore models (<em>Pharmacophore is an abstract description of molecular features
+that are necessary for molecular recognition of a ligand by a biological macromolecule</em>)
+,that purpose they used special computer program. Using that model they performed
+another screening on remaining compounds. Now the fit quality of the compounds to
+features described by a pharmacophore model was used as filtration criteria and allowed
+to choose 88 compounds for futher screening. This was done using molecular docking, and
+filtering criterion was score obtained with the ChemScore scoring function (which is
+popular scoring functions available in Discovery program). Number of compounds was
+further narrowed to 7, which was belived as resonable number. However this studies were
+unable to find any new potent drug, as all 7 compunds were less effective than drugs
+available on the marked, they nicely show the frame work. <a class="footnote-reference" href="#id33" id="id27">[5]</a></p>
+</dd>
+</dl>
+<div class="section" id="successful-example">
+<h2>Successful example</h2>
+<p>Study by group from Italy was focused on finding new inhibitors mitochondrial ADP/ATP carriers
+that translocate the ATP synthetized within mitochondria to cytosol in exchangefor ADP. Since
+those proteins are dysregulated in several cancer types, they belive that employment of
+inhibitors specific to those carriers might be crucial for inducing apoptosis in cancer cells.</p>
+<p>In order to find new potent inhibitors they constructed model of ADP/ATP carrier based on
+homological structure, from bull which shares ~90% of identical residues
+and using Modeller. As for collection of compounds to screen they have
+used KEGG ligand database, but only compounds greater than 10 atoms and lighter than 1200
+g/mol. Docking-based virtual screening (Virtual screening is computional technique used in drug discovery
+to search libraries of small molecules in order to identify new potent drugs against some target) was conducted
+using AutoDock and took <strong>2 months</strong> for
+completing the screening of the entire library. This allowed to choose 13 best molecules. In
+further research it was found that 2 of them showed good results and high selectivity,
+comparable or better that previously known inhibitors. <a class="footnote-reference" href="#id34" id="id28">[6]</a></p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>In one of the steps during preperation of docking simulation it neccecary for AutoDock and
+many other programs to specify, grid box. This is simply a space in which the program will
+tries to dock the ligand. Obviously such grid box should contain active site within it. In
+order to do that they took the protein they used for modeling the structure of their target,
+namely BtAAC1 in complex with its inhibitor CATR. And tried to redock that inhibitor into
+protein using different setting to a grid box sizes. During those preparation reserchres were
+able to successfully redock ligand back into protein, this also gave them a good insight into
+residues involved in substrat binding/recognition. It was shown that in binding site of two
+homologs percentage of identical residues was greater that 98%, thus justyfing used methodology.
+As I want to present you one of the free
+docking servers (swissdock) I though it would be good example to try and repeat redocking as
+thay did, however with different program as they used AutoDock.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="docking-programs-how-to-pick-one">
+<h1>Docking programs - how to pick one</h1>
+<p>On click2drug.org web site there is list of over 70 programs and web services dedicated to
+molecular docking. With such large and diverse set it is hard to decide on one single tool to
+use. To make such a choice resonably one should consider going through some latest reviews and
+reading some forums with topics like: <em>which docking tool is the best</em>. When it comes to
+reviews those comes almost every year and there is one important thing that we can learn from
+them that freewere programs does as good as properitary ones!'</p>
+<p>One feature worth to check is number of citations related with each program, based on this
+criteria we can find the most popular programs which include AutoDock, GOLD, DOCK, FlexX,
+Glide.</p>
+<table class="docutils footnote" frame="void" id="id29" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id3">2</a>, <a class="fn-backref" href="#id12">3</a>, <a class="fn-backref" href="#id13">4</a>, <a class="fn-backref" href="#id14">5</a>, <a class="fn-backref" href="#id15">6</a>, <a class="fn-backref" href="#id16">7</a>, <a class="fn-backref" href="#id17">8</a>, <a class="fn-backref" href="#id19">9</a>, <a class="fn-backref" href="#id21">10</a>, <a class="fn-backref" href="#id22">11</a>, <a class="fn-backref" href="#id23">12</a>, <a class="fn-backref" href="#id24">13</a>, <a class="fn-backref" href="#id25">14</a>, <a class="fn-backref" href="#id26">15</a>)</em> Leach A; Molecular Modelling - Principles and Applications; PEL; Essex; 2001.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id30" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id18">2</a>, <a class="fn-backref" href="#id20">3</a>)</em> Rigid and Flexible Dockin Methods. Web-site:http://bioinfo3d.cs.tau.ac.il/Education/CS99b/class_notes/class6.html.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id31" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td>Wikipedia.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id32" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[4]</td><td><em>(<a class="fn-backref" href="#id4">1</a>, <a class="fn-backref" href="#id5">2</a>, <a class="fn-backref" href="#id6">3</a>, <a class="fn-backref" href="#id7">4</a>, <a class="fn-backref" href="#id8">5</a>, <a class="fn-backref" href="#id9">6</a>, <a class="fn-backref" href="#id10">7</a>, <a class="fn-backref" href="#id11">8</a>)</em> Applied Case Studies and Solutions in Molecular Docking-Based Drug Design</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id33" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id27">[5]</a></td><td>M. Bajda, D.Panek et al. Search for potential cholinesterase inhibitors from the
+zinc data base by virtual screening method. Acta Poloniae Pharmaceutica - Drug
+Research. 2015, 72:737-745.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id34" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id28">[6]</a></td><td>S.Todisco et al. Identification of new highly selective inhibitors of the human
+ADP/ATP carriers by molecular docking and in vitro transport assays. Biochemical
+Pharmacology. 2016. 15: 112-132.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id35" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[7]</td><td>E. Yuriev et al.Improvements, trends, and new ideas in molecular docking: 2012-2013 in review. Journal
+of Molecular Recognition. 2015. 28:581-604.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id36" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[8]</td><td>M.J. Ramos et al. Protein-ligand docking in the New Millennium - A Retrospective of 10
+Years in the Field. Current Medicinal Chemistry. 2013. 20: 2296-2314.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
