@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.12: http://docutils.sourceforge.net/" />
+<title>Overview</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7614 2013-02-21 15:55:51Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+h2 {
+color: red;
+}
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title, .code .error {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+/* "booktabs" style (no vertical lines) */
+table.docutils.booktabs {
+  border: 0px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-collapse: collapse;
+}
+table.docutils.booktabs * {
+  border: 0px;
+}
+table.docutils.booktabs th {
+  border-bottom: thin solid;
+  text-align: left;
+}
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="overview">
+<h1 class="title">Overview</h1>
+
+<ul class="simple">
+<li>WWhat is bionanotechnology</li>
+<li>Bionanomachines, How do they work?</li>
+<li>Structural and functuonal principles of bionanotechnology</li>
+<li>Modern bionanotechnology</li>
+</ul>
+<div class="section" id="suggested-reading">
+<h1>Suggested reading</h1>
+<ul class="simple">
+<li><ol class="first upperalpha" start="5">
+<li>Gazit, Plentl of roo for biology at the bottom</li>
+</ol>
+</li>
+<li>Bionanotechnology lessons, Nature</li>
+<li>Nanobiotechnology: Concepts, Applicatins and Perspectives.</li>
+<li>Nanobiotechnology II: More Concepts and Applications.</li>
+<li>Bionanotechnology: Proteins to Nanodevices</li>
+</ul>
+</div>
+<div class="section" id="grading-scheme">
+<h1>Grading scheme</h1>
+<ul class="simple">
+<li>Final examination 50% (12 Dec. ?) - we need to pass it</li>
+<li>Final report (Due to Feb. 6 2017) 50%</li>
+<li>Physical chemistry knowlage is expected (free energy, gibbs free energy, helmholz free energy etc.)</li>
+</ul>
+</div>
+<div class="section" id="whorkshop-second-part-of-the-semester">
+<h1>Whorkshop - second part of the semester</h1>
+<p>We will be supplied with tutorial and all nececary files. In the tutorial there will be 3 tasks - those are
+nececery. There is also one Challenge that is nececary. If you do any other challenge you migth get extra
+points (5.5).</p>
+</div>
+<div class="section" id="grading-seminar">
+<h1>Grading seminar</h1>
+<ul class="simple">
+<li>we start Nov. 28.</li>
+<li>List of all seminar topics is given on eportal.</li>
+<li>You have to declare time and topic of your speach on some blog.</li>
+<li>Oral presentation counts for 80% of grade.</li>
+<li>Parcipitation is 20%</li>
+<li>Presence is obligatory.</li>
+<li>Presentation should be based on recent papers. (up to 5 yr. old)</li>
+<li>Speach should last 30 min &quot;- 5 min. Disscusion should last about 5-10 min.</li>
+<li>try to limit your presentation to 20-25 slides.</li>
+<li>presentation goal should be to enchant us.</li>
+</ul>
+</div>
+<div class="section" id="presentation-goals">
+<h1>Presentation goals:</h1>
+<ol class="arabic simple">
+<li>deliver clear introduction and the purpose of the study</li>
+<li>explain the necessarty methodology</li>
+<li>present the result/discussion</li>
+<li>conclude the topic</li>
+<li>provide the comprehensive analysis of the strong and weak points of the study &lt;&lt; textbf{very important}</li>
+<li>make a personal constructive criticism</li>
+<li>Once you have a draft of your speach go ask profesor if it is enough.</li>
+</ol>
+</div>
+<div class="section" id="class">
+<h1>2 class</h1>
+<ul class="simple">
+<li>Nanoscale is everything up to 100nm</li>
+<li>Top-down approach ( Michael Angel craved his pieta in a big block. its about making something, starting with something bigger.</li>
+<li>Nanotechnology (molecular nanotechnology) - a technology that manipulates matter at dimensins up to 100nm. The study of nanotechnology includes molecular systems, molecula assembiles (such as quantum dots), and organized self-assemnled devices and machines.</li>
+<li>Richard Feynman - nice physics lectures</li>
+</ul>
+</div>
+<div class="section" id="macro-vs-nano-sacle">
+<h1>Macro- vs nano-sacle</h1>
+<ul class="simple">
+<li>Upon reducing the size and no change in substance, fundamental properties of material such as electrical conductivity, melting point, color etc. will can change.</li>
+<li>For example something that is soft on the macro-scale may be 100 times stronger and 6 times lighter then steel at the nano-scale (nanotubes).</li>
+<li>Biotechnology is technology that involves the use and manipulation of living organisms - genetic engeenring.</li>
+<li>Nanobiotechnology - the use of nanosiciese for specific biological applications.</li>
+<li>Bionanotechnolgoy - subset of nanotechnology where biology provides the inspiration and or the ultimate goal. Technology that uses biological assemblies for various applications that may not be directly associated with biology.</li>
+</ul>
+</div>
+<div class="section" id="class-natural-bionanomachines">
+<h1>3 class - Natural bionanomachines</h1>
+</div>
+<div class="section" id="examples-of-bionanomachines">
+<h1>Examples of bionanomachines</h1>
+<p>This are examples of bionanomachines that works outside the cells:
+* pepsin
+* lysosome
+* amylase
+They find their use in industry like laundry specifics, corn sugar thing (syrop kukurydziany)</p>
+<p>When you start to look at the nanoscale the fundamental properties are changing, for example consider gravity.
+If you have huge building you need some kind of support for material to last. On the other hand when you go to
+microscale droplets can stay on the leaf - that is because adhesion and random forces are greater than gravity
+meaning those small things do not obey gravity. Other example is moving bacteria once it will stop moving its
+flagellum it will stop immediately - on opposite side consider a boat.</p>
+</div>
+<div class="section" id="more-examples">
+<h1>More examples</h1>
+<p>Nanocar build of fulleren wheels and alkines axis. This car is placed on gold surface, once it is heated
+fulleren wheels starts to rotate because there is very low bond-bond rotational boundary.
+Few years later there were proposed another nanocar with engine this time, build out of photo-active compound
+that rotates under light. Structure of this motor is a bit harass opposite to real car, that is because you
+can-t play with atoms as you like.</p>
+</div>
+<div class="section" id="examples-summary">
+<h1>Examples summary</h1>
+<ul class="simple">
+<li>In nanoscale there is no smooth atomic-scale motion (transition from one rotatory state to another is utilized whenchemical energy is applied.</li>
+<li>Individual atomic properties (covalent bonds, steric interaction, electrostatic interactions, hydrogen bonds) are defined rather then bulk properties (e.g. viscosity, friction).</li>
+<li>Natural bio-machines operates in cellular space - that is very special conditions, that are very important to specific nanomachines.</li>
+<li>Individual parts interact through random motion and diffusion.</li>
+</ul>
+<div class="section" id="q-is-diffusive-motion-sufficient-to-allow-interaction-between-the-two-bionano-machines-in-cell-containing-millions-of-other-bio-molecules-this-may-happen-on-the-exam-and-should-be-answered-with-some-equations-about-diffusion">
+<h2>Q: Is diffusive motion sufficient to allow interaction between the two bionano-machines in cell containing millions of other bio-molecules. This may happen on the exam and should be answered with some equations about diffusion.</h2>
+</div>
+</div>
+<div class="section" id="bionanomachines-in-water-environment">
+<h1>Bionanomachines in water environment</h1>
+<ul class="simple">
+<li>from and function of biological system are linked to chemical properties of individual components and water environment : hydrophobic effect is largely responsible for it</li>
+<li>in water bio-molecules are able to form a single form....</li>
+<li>Hydrophobic effect narrows number of possible protein conformations</li>
+<li>Carbon rich parts of the protein are hydrophobic</li>
+</ul>
+<div class="section" id="q-think-about-hydrophobic-effect-in-terms-of-thermodynamic-what-you-gains-and-loose-in-terms-of-entalpy-what-about-entropy-final-goal-will-be-to-tell-what-happens-with-gibbs-energy-this-process-is-spontaneous-deltag-0">
+<h2>Q: Think about hydrophobic effect in terms of thermodynamic what you gains and loose in terms of entalpy, what about entropy? Final goal will be to tell what happens with Gibbs energy. This process is spontaneous deltaG&lt;0.</h2>
+</div>
+</div>
+<div class="section" id="four-molecules-of-life">
+<h1>Four -molecules of life-</h1>
+<div class="section" id="q-structures-of-proteins-lipids-polysacharydes-and-nucleic-acids-and-impact-of-their-structure-on-theirs-properties">
+<h2>Q: Structures of proteins, lipids, polysacharydes and nucleic acids and impact of their structure on theirs properties.</h2>
+</div>
+<div class="section" id="q-1st-and-2nd-low-of-thermodynamics-3rd-and-0th">
+<h2>Q: 1st and 2nd low of thermodynamics. 3rd and 0th</h2>
+</div>
+</div>
+<div class="section" id="errors-are-natural-part-of-protein-synthesis">
+<h1>Errors are natural part of protein synthesis</h1>
+<ul class="simple">
+<li>In bacterial cells, the generic sequence is misread in about 1 in 2000 aa. Errors have often little effect on the function of the protein</li>
+<li>synthesis of the protein may terminate early and produce a truncated chain due to processivity errors. More common....</li>
+<li>kolagen as an example of a protein</li>
+</ul>
+</div>
+<div class="section" id="characteristics-of-nuclec-acids">
+<h1>Characteristics of nuclec acids</h1>
+<ul class="simple">
+<li>applied in nanoscale data storage and retrieval</li>
+<li>every ....</li>
+</ul>
+</div>
+<div class="section" id="lipids">
+<h1>Lipids</h1>
+<ul class="simple">
+<li>Lipids are used for cellular infrastructure</li>
+</ul>
+</div>
+<div class="section" id="polysacharydes">
+<h1>Polysacharydes</h1>
+<div class="section" id="q-sacharoze-what-is-the-conformation-of-each-unit-d-or-l">
+<h2>Q: Sacharoze what is the conformation of each unit D or L?</h2>
+<p>Carbon-hydrogen bonds are reservoirs of energy. Because glucose or sacharose is soluble in water it cannot be
+used for storing energy. Glycogen is much more appropriate for this purpose because it is unsoluble, and more
+over there is simple access for enzymes to cut it down.</p>
+<ul class="simple">
+<li>different linear and branched polymers are created for different needs</li>
+<li>individual chains may associate withe large quantity of water forming gluttery(?) gel</li>
+<li>carbohydrate chains may associate tightly side by side creating strong fibers with almost ....</li>
+</ul>
+</div>
+</div>
+<div class="section" id="limits-imposed-by-evolution">
+<h1>Limits imposed by evolution</h1>
+<ul class="simple">
+<li>cells use a few synthetic techniques and rely on a few simple molecular plans to build their different bionanomachines</li>
+<li>Small steps are better - big evolutionary step might have disastrous results ; evolution favors modification over innovation</li>
+<li>bio-molecules requite water environment, as well as proper temperature, pH and salinity.</li>
+<li>Bio-molecues are constrained by:
+* 20 aminoacids alphabet</li>
+<li>bionanomachines have short life span and are build to perform only one task.</li>
+</ul>
+</div>
+<div class="section" id="aims-of-bionanotechnology">
+<h1>Aims of bionanotechnology</h1>
+<ul class="simple">
+<li>designing bionano-machinery from scratch. There is much problems with this task:
+* no reliable folded structure of a protein from its chemical sequence
+* tools that are available today are don-t give us a insight into chemical activity of folded protein structure.</li>
+</ul>
+</div>
+<div class="section" id="methods-in-bionanotechnology">
+<h1>Methods in bionanotechnology</h1>
+</div>
+<div class="section" id="recombinant-dna-technology">
+<h1>Recombinant DNA technology</h1>
+<ul class="simple">
+<li>using recombinant DNA technology one can construct any required protein.</li>
+<li>two natural enzymes: restriction enzymes and DNA ligase are utilized in technology.</li>
+<li>Restriction enzymes types: 7 classes
+* Type I cleaves DNA at random sites far from its recognition sequence
+* Then it gets better and more specific</li>
+<li>Restriction enzymes might produce blunt or sticky ends.</li>
+<li>Chemical synthesis of DNA, there are troubles with lengths of those.</li>
+</ul>
+</div>
+<div class="section" id="pros-and-cons-of-using-bacteria">
+<h1>Pros and cons of using bacteria</h1>
+<ul class="simple">
+<li>easy to grow and cheap</li>
+<li>may animal and plats proteins have carbohydrate groups attached to their surfaces to be active and bacteria do not ad these groups to engineered proteins.</li>
+<li>proteins tend to aggregate when they reach high concentration forming inclusions bodies. They are formed when new proteins associate randomly..</li>
+</ul>
+<p>Cell-free methods of producing proteins
+Why? It provides a controlled method for synthesizing proteins difficult to engineered in bacteria such as:
+* membrane proteins
+* proteins with ...</p>
+<p>This is done in vitro</p>
+<div class="section" id="q-site-directed-mutagenesis">
+<h2>Q: Site-directed mutagenesis</h2>
+</div>
+</div>
+<div class="section" id="id1">
+<h1>???</h1>
+<ul class="simple">
+<li>may be used in determining the function of specific aa or regions within a protein</li>
+<li>may improve the stability of proteins, by engineering cross-linking residues or improving the fitting of residues within the protein interior.</li>
+</ul>
+</div>
+<div class="section" id="fusion-chimeric-proteins">
+<h1>Fusion/chimeric proteins</h1>
+<p>Two proteins with different functions are combined creating a hybrid protein with both functions. For instance
+anticancer immunotoxins.</p>
+</div>
+<div class="section" id="antibodies">
+<h1>Antibodies</h1>
+<p>Antibodies are interesting because there is a need for an effective method for recognizing individual
+molecules.
+* Immune system produce high amount of different antibodies with hope that one will fit 10^{15}
+* If we combine this natural library of molecules with modern method of synthesizing antibodies...
+* It is now routinely possible to obtain antibodies capable of high-affinity recognition of virtually any molecule.
+* Monoclonal and heteroclonal antibodies production.
+* antibodies can be found in: pregnancy test, heart protein in blood - heart attack , test for HIV viruses, test for patient with Lupus ( autoimmune disease).
+* Antibodies can be also used to treat diseases: neutralize toxins (snake toxin), effective in treating some types of cancer (Hodgkin lymphoma).</p>
+</div>
+<div class="section" id="x-ray-crystallography">
+<h1>X-ray crystallography</h1>
+<ul class="simple">
+<li>X-ray technique provides the most detailed atomic structures</li>
+<li>resolution of the structure depends on the quality of the crystals</li>
+<li>typical X-ray studies of proteins are resolved within 1.5-3.0 A</li>
+<li>at 3.0 A final coordinates must be taken with care</li>
+<li>mobile regions of the structure may not be well resolved</li>
+<li>X-ray structure is average structure</li>
+<li>temperature factors (B-values) of the atomic positions are good indicators of the quality of coordinates.Large values ~40 might mean 2 things: this amino acid is mobile or resolution of this part of the protein is low.</li>
+<li>protein is bounded within oriented crystal lattice - single conformation</li>
+<li>to study functional aspects of proteins number of crystal obtained under varied conditions must be studied.</li>
+</ul>
+</div>
+<div class="section" id="next-class">
+<h1>Next class</h1>
+</div>
+<div class="section" id="nmr-for-biomolecules">
+<h1>NMR for biomolecules</h1>
+<p>NMR is very useful because it allows one to perform experiment close to natural conditions, but it is limited to
+quite small proteins - now days up to 80 kDa, for oligomers up to 900 kDa (each monomer is explored
+separately). When studying many proteins it is easier to use multidimensional NMR and isotopical labeling as it
+allows to overcome complexity. (Problems of NMR)</p>
+</div>
+<div class="section" id="how-it-works">
+<h1>How it works?</h1>
+<div class="section" id="homework-what-is-atomic-number">
+<h2><em>Homework what is atomic number?</em></h2>
+<p>Using information from NMR experiment - list of contacts, one can combine it into an atomic models. This will
+produce number of structures. This can be explained in two ways: all are true and present in solution, only
+one is real structure.</p>
+</div>
+</div>
+<div class="section" id="electron-microscopy">
+<h1>Electron microscopy</h1>
+<p>Limitation of visual microscopy is about 350nm.</p>
+<p>Features of electron microscopy:
+* theoretically should be able to see atoms but due to:
+* imperfection in the magnetic optics
+* problems with specimen preparation
+* low contrast
+* radiation damage</p>
+<ul class="simple">
+<li>resolution is limited to 2 nm for bio-systems</li>
+<li>2 nm resolution allows one to determine the overall morphology of bio-molecules and bio-molecular complexes</li>
+<li>is used to study assemblies that are too large for other methods</li>
+<li>Hydrogen diameter</li>
+</ul>
+</div>
+<div class="section" id="transmission-electron-microscopy">
+<h1>Transmission electron microscopy</h1>
+<ul class="simple">
+<li>the electron beam illuminates a thin sample</li>
+<li>the microscope determines the relative transparency of different regions</li>
+<li>biological specimens give very low contrast, therefore they are often stained with heavy metal salts which may introduce artifacts during treatment and drying</li>
+</ul>
+</div>
+<div class="section" id="electron-tomography">
+<h1>Electron tomography</h1>
+<ul class="simple">
+<li>images are 3D</li>
+</ul>
+</div>
+<div class="section" id="scanning-electron-microscopy">
+<h1>Scanning electron microscopy</h1>
+<ul class="simple">
+<li>provides 3D image by looking at electrons that are scattered or emitted from the surface of the specimen</li>
+<li>dried sample is coated with a thin layer of metal</li>
+<li>specimen is then scanned with narrow beam of electrons to image the surface</li>
+<li>due to metal coat resolution is lower than in electron microscopy ~ 10nm</li>
+</ul>
+</div>
+<div class="section" id="atomic-force-microscope">
+<h1>Atomic Force Microscope</h1>
+<div class="section" id="q-simple-describe-how-it-works">
+<h2>Q: Simple describe how it works</h2>
+<ul class="simple">
+<li>As a result one gets topology, but not only?</li>
+<li>operation modes and when we use them</li>
+<li>resolution is typically within 5nm to 10nm and depends on the sharpness of the tip</li>
+<li>may be used to measure forces between bio-molecules during stretching, folding</li>
+</ul>
+</div>
+</div>
+<div class="section" id="molecular-modeling-computer-modeling">
+<h1>Molecular modeling - computer modeling</h1>
+<p>It allows you to look at the structure and analyze it, but you have to have it first. There are 4 different
+modes of action:</p>
+<ul class="simple">
+<li>Minimization:
+* First step in building model is to add hydrogens
+* The one need minimization of the hydrogens, by relaxing thier position and looking for local minimas
+* Once you have full model you start another minimization
+* You heat up the system and start MD.
+* If you already done MD and need to select number of snapshot for future QM/MM calculations, there might be certain artifacts (in bond lengths etc). Those artifacts can be removed using minimization.</li>
+<li>Normal mode analysis</li>
+<li>Molecular dynamics</li>
+<li>Free energy perturbation - From MD you are not able to get any thermodynamics. If you want to get insight into stability you should have insight in free energy and entropy. Same for kinetics and equilibrium constants etc.</li>
+</ul>
+</div>
+<div class="section" id="conformational-searching-problem">
+<h1>Conformational Searching Problem</h1>
+<p>In MD it is crucial to know global minimum.
+* Native conformation is the one with the lowest free energy
+* Search among all possible configurations will take astronomically long time. Yet proteins can fold in
+seconds
+* Proteins do not fold by sequentially sampling all configuration space
+* Intermediates and transition states of the folding process were found experimentally</p>
+<div class="section" id="homework-why-may-applicability-of-homology-modeling-and-secondary-structure-prediction-techniques-in-bionanotechnology-be-hampered">
+<h2><strong>Homework: Why may applicability of homology modeling and secondary structure prediction techniques in bionanotechnology be hampered?</strong></h2>
+</div>
+</div>
+<div class="section" id="docking-simulations">
+<h1>Docking simulations</h1>
+<p>Docking simulations operate in two modes:
+* structural model - search possible arrangements of molecules
+* energetic model - energy of interactions</p>
+<p>Today-s docking techniques are successful in ca. 50% of cases. Protein target is usually kept rigid or
+partially rigid due to cpu savings (<em>PROBLEMS:</em> when protein changes conformation during binding small
+molecule - this can be in most cases overcome with letting some part of protein to be relaxed).</p>
+</div>
+<div class="section" id="computer-aided-drug-design">
+<h1>Computer-aided drug design</h1>
+<ul class="simple">
+<li>may be used for design of site-directed mutations of increased stability and shifted functionality in proteins</li>
+<li>to design drug molecule that perfectly fits into the active site and blocks normal function of protein</li>
+<li>Example applications of computional modeling can be found at David Baker web site*</li>
+</ul>
+</div>
+<div class="section" id="method-used-to-design-bionanomachines">
+<h1>Method used to design bionanomachines</h1>
+<ol class="arabic simple">
+<li>sequential formation of covalent bonds</li>
+<li>polymerization - synthesis is possible only for monomers that are stable under the reaction conditions</li>
+<li>self-organization (micells,bilayers)
+* non-covalent organization of modular units building structure
+* self-organizing structure is at a <em>thermodynamic minimum</em>
+* <em>non-specific</em> interactions between modular units</li>
+</ol>
+<p>#. self-assembly
+* non-covalent organization of modular units building structure
+* self-assembling structure is at a <em>thermodynamic minimum</em>
+* <em>specific</em> interactions between modular units</p>
+<div class="section" id="q-spontanity-of-the-process-gibs-free-energy">
+<h2>Q: <strong>Spontanity of the process - gibs free energy</strong></h2>
+</div>
+</div>
+<div class="section" id="interactions-between-building-blocks">
+<h1>Interactions between building blocks</h1>
+<ul class="simple">
+<li>Electrostatic interactions</li>
+<li>Hydrogen bonds (inter- and intramolecular)</li>
+<li>vdW interactions (their contribution depends on distance and might be either repulsive or attractive), <strong>vdW radious</strong>.</li>
+</ul>
+<p>#. Covalent bonding
+* in principle a new molecule may be designed using the appropriate number and geometry of bonds
+* use chemical knowledge to find out about the stability of the new molecule
+* covalent bonds are quite stiff (the length may be changed by a fraction of an $AA$ only; valence angle may change little; substantial torsion around single bonds is possible)</p>
+<ul class="simple">
+<li>the strength of designed molecule...</li>
+<li>positive $delta G$ means that structure is not stable, but kinetics might be so slow that they exist (benzene,diamond)</li>
+</ul>
+<ol class="arabic simple">
+<li>Dispersion and repulsion interactions
+* repulsion interaction (consequence of Pauli principle) prevent overlap of atoms
+* dispersion forces are caused by induced charge interactions when two atoms are in close proximity (contribute to adhesion and friction)</li>
+<li>Hydrogen bonds
+*  weaker than covalent bonds but stronger than typical thermal energy
+*  relatively easy to break (water drops vs liquid water)</li>
+<li>Coulomb interactions
+* long-range forces (even at 15 $AA$)
+* act at short distances forming strong linkage between two charged groups (salt bridges)
+* at long distances to interact (attract or repel) with other molecules
+* Examples:
+* salt bridges occurring on surface of bio-molecule stabilizing its structure
+* coordinated metal ions to stabilize bio-molecular structure or used for specific function
+* electrostatic interactions are reduced bu dielectric effect (strongly in water due to dynamic reorganization, slightly in protein; water dumps el. interactions 80-fold)</li>
+<li>Hydrophobic effect
+* stability of water solution is a sum of enthalpic energies (hydrogen bonds, dispersion/repulsion interactions) and entropic energies ( higher entropic energies when individual water molecules are in more chaotic orientation).
+* in case of protein folding event we call entropy connected directly with folding a <em>conformational entropy</em>, the entropy connected with hydrogen-s rearrangements <em>hydrophobic entropy</em>. In most cases conformational entropy is larger.
+* In most cases net entalpy of the whole folding process is slightly negative. When you sum up all effects ( slightly negative entalpy &quot; negative hydrophobic effect &quot; positive conformational entropy ) it will sum up usually to slightly negative value ~4 kcal/mol. (45 kJ/mol)
+*  <strong>KJ --&gt; kcal</strong></li>
+</ol>
+<div class="section" id="q-there-are-some-protein-that-disociate-when-you-decreese-the-temperature-close-to-0c">
+<h2><strong>Q:There are some protein that disociate when you decreese the temperature close to 0C</strong></h2>
+<p>Under very high pressure some protein might denature, this is related with
+<strong>Q:Why hydrophobic effect is strenghed upon pressure incressment? Deribative of deltaG over presure is a hint ( deltaG = -RTlnK )</strong>
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+Water molecules changes the structure upon increasing the temperature. If you increase the pressure water molecules prefers
+more dense structure.</p>
+</div>
+</div>
+<div class="section" id="protein-folding">
+<h1>Protein folding</h1>
+<p>According to some databases there are ~1300 different folds possible. A wide range of homologous sequences fold into similar
+structure. Due to this structure might be predicted based on sequences homology, this is quite accurate for sequences with ca.30-40% of identical aa.
+* Single mutation may become fatal for functioning of the protein even though new protein structure
+will retain a high homology to a protein that folds successfully*. When modifying a protein for a specific function one has to ...</p>
+</div>
+<div class="section" id="design-strategies">
+<h1>Design strategies</h1>
+<ol class="arabic simple">
+<li>Positive design. One have to find a stable structure that performs a specific task, this is based on experimental information.</li>
+<li>Negative design. One tries to destabilize some of competitive fold, stabilizing the right one. Those competitive folds might be due to aggregates or alternative states. Alternate states might be destabilized by introducing mutations for example one might destroy some sulfate bridges or introduce some mutations at the surface of the protein. Or in polar and charged aa placed on loops and other segments remaining on the protein surface during folding process. Pairs of charged aa form stabilizing interactions in appropriate fold. Shape-based requirements - different aa in a protein sequence may fit together in a proper structure or clash in improper one. Gly and Pro are placed in regions that form loops in properly folded structures since these aa can interrupt the formation of alpha helices. Hydrogen bonds and salt bridges that are inside protein form stabilizing pairs in properly folded structure (unpaired in improperly folded structures).</li>
+</ol>
+</div>
+<div class="section" id="chaperones-assist-in-folding">
+<h1>Chaperones assist in folding</h1>
+<p>Protein folding is driven by hydrophobic effect sheltering hydrophobic regions of aa from water. <strong>DANGER</strong> it may be done
+by alternative mechanism: aggregation into large membranes of amorphous structures (like in lipids).</p>
+<p>Chaperons separate the individual protein chains providing the environment where the chain may fold without interference.
+* <em>Inclusion bodies*</em> are aggregates of proteins that are not properly folded, chaperons prevent this event, by creating hydrophobic
+container. There are also some chaperons that might not only assist in folding but also make some corrections, like
+improper formation of disulfide bonds that cross link Cys at distant parts of aa chain can push the protein into inappropriate
+conformation. Enzyme protein disulfide isomerase assists in breaking such improper bonds.</p>
+<p>Functions of chaperons
+- chaperons may provide proper environment for folding
+- chaperons may assist proteins in overcoming certain problems
+- they do not need information about particular protein
+- they do not provide information on the folding</p>
+</div>
+<div class="section" id="protein-stable-at-high-temperature-why">
+<h1>Protein stable at high temperature - Why?</h1>
+<p>Protein engineering field is interested in designing protein stable at extreme temperatures. Answering this question could
+help designing proteins stable in non-polar solvents, and more reactive at high temperature. Makes use of higher concentrations
+of starting materials, faster reaction rates, easy purification.</p>
+<p>Thermophilic bacteria (live at temperatures between 60-80C and hyperthermophizlic (above 100C) bacteria have developed proteins
+that are stable and highly active at high temperatures. Comparing sequences of heat-stable proteins and their heat-labile
+counterparts in other organisms one can see they are highly similar (40-80%). Their 3D structures are essentially identical,
+typically they use identical catalytic mechanism. <strong>The major difference is rigidity, achived by small changes at the surface
+of the protein</strong>.</p>
+<ul class="simple">
+<li><em>Exam 1st term: Jun 9, 2nd term Jun 30, 3rd term: Feb 9*</em></li>
+</ul>
+<p>Rigidity in proteins can be achieved:
+* rigidity makes initial unfolding more difficult
+* this can be achieved by introducing:
+* ...
+* ...</p>
+</div>
+<div class="section" id="disorder-in-proteins">
+<h1>Disorder in proteins</h1>
+<p>Some proteins do not adopt a single well defined conformation but take advantage of transitions between order and disorder in
+their function. Such protein has to have at least 30 aa. One of the advantages is that surface area can act with any molecule
+which are larger than globular. It is also more flexible - so it has high specificity but low affinity in comparison to
+globular proteins.</p>
+<p>Disordered proteins have short functional life allowing quick responses and tight control of signals. They also can be reused
+many times. Some of them become ordered upon binding to a target, and disordered once again on unbinding. Example are antibodies.</p>
+</div>
+<div class="section" id="how-to-design-disordered-proteins">
+<h1>How to design disordered proteins?</h1>
+<p>design in such a way to discourage formation of stable folded structure:
+* some way to achieve that</p>
+</div>
+<div class="section" id="selfassembly">
+<h1>Selfassembly</h1>
+<p>Self assembly method is used to build nanomachines of precise size and shape. This process is driven by thermodynamics (delta
+G is negative).</p>
+<div class="section" id="q-think-about-selfassembly-in-same-manner-as-was-told-about-hydrophobic-effect">
+<h2><strong>Q: Think about selfassembly in same manner as was told about hydrophobic effect</strong></h2>
+<ul class="simple">
+<li>economical reasons in terms of information - only information to construct one subunit is required</li>
+<li>economical reasons in terms of error correction - a single faulty subunit is discarded not an entire complex</li>
+<li>assembles consisting of several subunits take advantage of cooperativity</li>
+<li>symmetry may be used to build a molecule with identical binding sites to enhance the binding affinity</li>
+</ul>
+</div>
+</div>
+<div class="section" id="symmetry">
+<h1>Symmetry</h1>
+<ul class="simple">
+<li>in symmetrical complexes all subunits are identical in terms of structure and environment</li>
+<li>each subunit interacts with it-s neighbor identically</li>
+<li><strong>READ Structual Symmetry and Protein Function</strong></li>
+<li>Some knowledge of symmetry group-s! Cyclic, dihedrals, cubic</li>
+</ul>
+<p>There are also assemblies with translational symmetry. Usually both types of symmetries are coupled together.</p>
+</div>
+<div class="section" id="how-to-contol-the-size-of-unbounded-polymers">
+<h1>How to contol the size of unbounded polymers</h1>
+<ul class="simple">
+<li>use a molecules of defined size to measure out the length of polymer e.g. titin measures myosin filaments in muscle sarcomers</li>
+<li>use a time activated switch e.g. microtubules disassemble when the amount of cleaved nucleotides reaches certain level</li>
+</ul>
+</div>
+<div class="section" id="quasisymmetrical-complexes">
+<h1>Quasisymmetrical complexes</h1>
+<p>We don-t care about identical surfaces. In this examples symmetry groups are not strictly respected. This type of symmetry is
+widely used by viruses. Using this type of symmetry allows to get more subunits than in case of <em>classical</em> symmetry.</p>
+</div>
+<div class="section" id="effect-of-crowding-on-self-assembly">
+<h1>Effect of crowding on self-assembly</h1>
+<p>About 30% of cell is taken by bionanomachines, this effect diffusion rate by slowing it. It also slows down with size of the
+molecules. The counter effect to this slow down is association ...</p>
+</div>
+<div class="section" id="self-organization">
+<h1>Self organization</h1>
+<ul class="simple">
+<li>self organization process produces structures that are flexible and resistant (e.g. kuoid members ???)</li>
+<li>process works more or less like in self assembly</li>
+<li>spontaneous</li>
+<li>nonspecific areas of interactions, thus their are mobile</li>
+</ul>
+</div>
+<div class="section" id="basic-principles-of-molecular-recognition">
+<h1>Basic principles of molecular recognition</h1>
+<ul class="simple">
+<li>multiple and weak interactions ensures specificity</li>
+<li>complementarity of geometrical shapes and proper arrangement of interacting sites (nearly all are non-bonding interactions)</li>
+<li>specific blocking - in order to avoid anything that is not welcome you may introduce aa that will block non-welcome molecules</li>
+<li>separate prof reading step e.g. by incorporating another active site</li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h1>Summary</h1>
+<ul class="simple">
+<li>Atomicity limits the precision (recognition ability) of bionanomachines</li>
+</ul>
+</div>
+<div class="section" id="flexibilty-of-biomolecules">
+<h1>Flexibilty of biomolecules</h1>
+<ul class="simple">
+<li>chemical reactions (local vibrations) -- for a transition state one of vibrational frequencies will be imaginary</li>
+<li>induced fit for recognition (vibrations of site chains, loops or domains)</li>
+<li>bending, flexing, opening or closing of proteins used in regulation and binding</li>
+<li>shifting between several conformations having different functionalities used in regulation e.g <strong>allosteric motion?</strong></li>
+<li><em>sci-hub.cc*</em></li>
+</ul>
+</div>
+<div class="section" id="energy">
+<h1>Energy</h1>
+<p>Sources of energy:
+<ul>
+	<li> chemical</li>
+	<li> light</li>
+	<li> electrical</li>
+</ul></p>
+<p>Use of energy:
+<ul>
+	<li>some energy unfavorable chemical reactions</li>
+	<li>pure power of motion</li>
+</ul></p>
+<p>Bionanomachines do not use reactions releasing a large quantity of heat, to prevent dissipation of heat. Thus energy is transferred
+in nanoscale pieces.</p>
+<p>Transfer of energy in natural bionanomachines:
+<ul><li>- combine two reaction to boost a less favorable one</li></ul></p>
+</div>
+<div class="section" id="atp">
+<h1>ATP</h1>
+</div>
+<div class="section" id="end-of-lecture">
+<h1>END OF LECTURE</h1>
+</div>
+</div>
+</body>
+</html>
