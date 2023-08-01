@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maciej Migdał - bioinformatics, data analysis, IT</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="https://kit.fontawesome.com/c3ebd3bc8f.js" crossorigin="anonymous"></script>
+  <!-- TODO <link rel="icon" type="image/png" href="favicon.png" /> -->
+</head>
+
+<body>
+  <div class="columns">
+    <div class="column is-narrow">
+      <section class="card" id="bio" style="position: sticky; top: 0;">
+        <div class="card-content">
+          <p class="title is-4 has-text-centered">Maciej Migdał</p>
+          <div class="icon-text">
+            <span class="icon">
+              <i class="fas fa-regular fa-envelope"></i>
+            </span>
+            <span>mcjmigdal[at]gmail.com</span>
+          </div>
+          <div class="icon-text">
+            <span class="icon">
+              <i class="fas fa-brands fa-github"></i>
+            </span>
+            <a href="https://github.com/mcjmigdal">github.com/mcjmigdal</a>
+          </div>
+          <div class="icon-text">
+            <span class="icon">
+              <i class="fas fa-brands fa-linkedin"></i>
+            </span>
+            <a href="https://www.linkedin.com/in/mcjmigdal">in/mcjmigdal</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <div class="column">
+
+      <section id="aboutme" class="hero">
+        <div class="hero-body">
+          <p class="title">About me</p>
+          <div class="content has-text-justified">
+            <p>
+              My main professional interest is application of statistical methods
+              and programming in data analysis of hight throughput biological 
+              experiments. Especially I am interested in working with 
+              Next-Generation Sequencing (NGS) data from experiments such as 
+              ATAC-seq and RNA-seq, and elucidating interactions between chromatin 
+              structure and gene expression. 
+            </p>
+            <p>
+              My personal goal is to further grow as a bioinformatician and 
+              programmer to became more proficient scientists.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <h1 class="title">Projects</h1>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+          <article id="xcore" class="tile is-child box is-clickable" 
+              onclick="window.open('https://bkaczkowski.github.io/xcore/', '_blank')">
+            <p class="title">xcore</p>
+            <p class="subtitle">an R package for inference of gene expression regulators</p>
+            <div class="content has-text-justified"
+              <p class="has-text-justified">
+                xcore is an R package for transcription factor activity modeling 
+                based on known molecular signatures and user's gene expression 
+                data. Accompanying <em>xcoredata</em> package provides a collection of 
+                molecular signatures, constructed from publicly available 
+                ChiP-seq experiments.
+              </p>
+            </div>
+          </article>
+          </div>
+
+          <div class="tile is-parent">
+          <article id="midasHLA" class="tile is-child box is-clickable" 
+              onclick="window.open('https://genentech.github.io/MiDAS', '_blank')">
+            <p class="title">midasHLA</p>
+            <p class="subtitle">Meaningful Immunogenetic Data at Scale</p>
+            <div class="content has-text-justified"
+              <p>
+                Human immunogenetic variation in the form of HLA and KIR types has 
+                been shown to be strongly associated with a multitude of 
+                immune-related phenotypes. We present MiDAS, an R package 
+                enabling statistical association analysis and using immunogenetic 
+                data transformation functions for HLA amino acid fine mapping, 
+                analysis of HLA evolutionary divergence as well as HLA-KIR 
+                interactions. MiDAS closes the gap between inference of immunogenetic 
+                variation and its efficient utilization to make meaningful discoveries.
+              </p>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</body>
+
+</html>
