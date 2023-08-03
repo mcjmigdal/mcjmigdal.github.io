@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="columns">
+  <div class="columns" style="height: 150vh">
     <div class="column is-narrow has-background-primary-dark">
       <section class="card" id="bio" style="position: sticky; top: 5px;">
         <div class="card-content">
@@ -40,30 +40,30 @@
     
     <div class="column">
 
-      <section id="aboutme" class="hero">
-        <div class="hero-body">
-          <p class="title">About me</p>
-          <div class="content has-text-justified">
-            <p>
-              My main professional interest is application of statistical methods
-              and programming in data analysis of hight throughput biological 
-              experiments. Especially I am interested in working with 
-              Next-Generation Sequencing (NGS) data from experiments such as 
-              ATAC-seq and RNA-seq, and elucidating interactions between chromatin 
-              structure and gene expression. 
-            </p>
-            <p>
-              My personal goal is to further grow as a bioinformatician and 
-              programmer to became more proficient scientists.
-            </p>
-          </div>
+      <section id="aboutme" class="section">
+        <h1 class="title">Hi, I'm Migdał</h1>
+        <div class="content has-text-justified">
+          <p>
+            My main professional interest is application of statistical methods
+            and programming in data analysis of hight throughput biological 
+            experiments. Especially I am interested in working with 
+            Next-Generation Sequencing (NGS) data from experiments such as 
+            ATAC-seq and RNA-seq, and elucidating interactions between chromatin 
+            structure and gene expression. 
+          </p>
+          <p>
+            My personal goal is to further grow as a bioinformatician and 
+            programmer to became more proficient scientists.
+          </p>
         </div>
       </section>
 
       <section id="projects" class="section">
         <h1 class="title">Projects</h1>
+
         <div class="tile is-ancestor">
-          <div class="tile is-parent">
+          <div class="tile is-parent is-vertical">
+
           <article id="xcore" class="tile is-child box is-clickable" 
               onclick="window.open('https://bkaczkowski.github.io/xcore/', '_blank')">
             <p class="title">xcore</p>
@@ -77,27 +77,108 @@
                 ChiP-seq experiments.
               </p>
             </div>
+            <figure class="image">
+              <img src="https://bkaczkowski.github.io/xcore/articles/flowchart.png"
+                   alt="xcore workflow"
+              >
+            </figure>
           </article>
+
+          <article id="sumsamstats" class="tile is-child box is-clickable" 
+              onclick="window.open('https://github.com/mcjmigdal/sumsamstats', '_blank')">
+            <p class="title">sumsamstats</p>
+            <div class="content has-text-justified"
+              <p class="has-text-justified">
+                Parser and tools for summarising outputs of samtools stats, with ATAC-seq in mind.
+                Shipped together with a Shiny application to help visualize the outputs.
+              </p>
+            </div>
+          </article>
+
+          <article id="RNA-seq_data_analysis_course_for_biologists_may_2018" class="tile is-child box is-clickable" 
+              onclick="window.open('https://github.com/mcjmigdal/RNA-seq_data_analysis_course_for_biologists_may_2018', '_blank')">
+            <p class="title">RNA-seq data analysis for biologists</p>
+            <div class="content has-text-justified"
+              <p class="has-text-justified">
+                RNA-seq workshop covering one of the simplest data analysis workflows, 
+                starting with data download and finishing at differential expression calling.
+              </p>
+            </div>
+          </article>
+
+          <article id="wheatherstation" class="tile is-child box is-clickable" 
+              onclick="window.open('', '_blank')">
+            <p class="title">Wheather station</p>
+            <div class="content has-text-justified"
+              <p class="has-text-justified">
+                Mini-project
+              </p>
+            </div>
+          </article>
+
           </div>
 
-          <div class="tile is-parent">
+          <div class="tile is-parent is-vertical">
+
           <article id="midasHLA" class="tile is-child box is-clickable" 
               onclick="window.open('https://genentech.github.io/MiDAS', '_blank')">
             <p class="title">midasHLA</p>
             <p class="subtitle">Meaningful Immunogenetic Data at Scale</p>
             <div class="content has-text-justified"
               <p>
-                Human immunogenetic variation in the form of HLA and KIR types has 
-                been shown to be strongly associated with a multitude of 
-                immune-related phenotypes. We present MiDAS, an R package 
-                enabling statistical association analysis and using immunogenetic 
+                midasHLA is an R package for statistical analysis of human 
+                immunogenetic variation in the form of HLA and KIR types.
+                The package enables association analysis and using immunogenetic 
                 data transformation functions for HLA amino acid fine mapping, 
                 analysis of HLA evolutionary divergence as well as HLA-KIR 
-                interactions. MiDAS closes the gap between inference of immunogenetic 
+                interactions. midasHLA closes the gap between inference of immunogenetic 
                 variation and its efficient utilization to make meaningful discoveries.
               </p>
             </div>
+            <figure class="image is-flex is-justify-content-center">
+                <img src="https://github.com/Genentech/midasHLA/raw/master/vignettes/MiDAS_logo.png"
+                     style="width: 50%; height: auto" alt="midasHLA logo"
+                >
+            </figure>
           </article>
+
+          <article id="atacseq_pipeline" class="tile is-child box is-clickable" 
+              onclick="window.open('https://gitlab.com/zdglab/atacseq_pipeline', '_blank')">
+            <p class="title">ATAC-seq pipeline</p>
+            <div class="content has-text-justified"
+              <p>
+                Data analysis pipeline implemented in Nextflow. It starts with the raw FASTQ files 
+                and outputs peaks denoting nucleosome free regions toghether with count quantification. 
+                The pipeline supports peak calling using information from multiple replicates.
+              </p>
+            </div>
+          </article>
+
+          <article id="shiitake" class="tile is-child box is-clickable" 
+              onclick="window.open('https://github.com/mcjmigdal/shiitake', '_blank')">
+            <p class="title">shiitake</p>
+            <div class="content has-text-justified"
+              <p>
+                Mini-project, automating Shiitake mushrooms growth conditions monitoring 
+                and taking pictures with Raspberry Pi.
+              </p>
+            </div>
+            <figure class="image is-flex is-justify-content-center">
+                <img src="https://mcjmigdal.github.io/shiitake/data/img/2021-08-09_1407.jpg"
+                     style="width: 50%; height: auto;" alt="picture of shiitake mushrooms"
+                >
+            </figure>
+          </article>
+
+          <article id="moma" class="tile is-child box is-clickable" 
+              onclick="window.open('', '_blank')">
+            <p class="title">MOtif MApper</p>
+            <div class="content has-text-justified"
+              <p>
+              </p>
+            </div>
+          </article>
+
           </div>
         </div>
       </section>
