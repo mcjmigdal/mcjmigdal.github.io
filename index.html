@@ -11,208 +11,209 @@
 </head>
 
 <body>
-  <div class="columns">
 
-    <div class="column is-narrow" style="background: url('rect5216.png') repeat right; background-size: contain;">
-      <section class="card" id="bio" style="position: sticky; top: 5px;">
-        <div class="card-content">
-          <p class="title is-4 has-text-centered">Maciej Migdał</p>
-          <div class="icon-text">
-            <span class="icon">
-              <i class="fas fa-regular fa-envelope"></i>
-            </span>
-            <span>mcjmigdal[at]gmail.com</span>
-          </div>
-          <div class="icon-text">
-            <span class="icon">
-              <i class="fas fa-brands fa-github"></i>
-            </span>
-            <a href="https://github.com/mcjmigdal">github.com/mcjmigdal</a>
-          </div>
-          <div class="icon-text">
-            <span class="icon">
-              <i class="fas fa-brands fa-linkedin"></i>
-            </span>
-            <a href="https://www.linkedin.com/in/mcjmigdal">in/mcjmigdal</a>
-          </div>
-          <div class="icon-text">
-            <span class="icon">
-              <i class="fas fa-brands fa-orcid"></i>
-            </span>
-            <a href="https://orcid.org/0000-0002-8021-7263">orcid.org</a>
+   <section class="hero is-halfheight is-success" id="bio">
+     <div class="hero-head">
+        <div class="navbar-menu">
+          <div class="navbar-end tabs is-right"/>
+
+            <div class="navbar-item icon-text">
+              <span class="icon">
+                <i class="fas fa-regular fa-envelope"></i>
+              </span>
+              <span>mcjmigdal[at]gmail.com</span>
+            </div>
+            <div class="navbar-item icon-text">
+              <span class="icon">
+                <i class="fas fa-brands fa-github"></i>
+              </span>
+              <a href="https://github.com/mcjmigdal">github.com/mcjmigdal</a>
+            </div>
+            <div class="navbar-item icon-text">
+              <span class="icon">
+                <i class="fas fa-brands fa-linkedin"></i>
+              </span>
+              <a href="https://www.linkedin.com/in/mcjmigdal">in/mcjmigdal</a>
+            </div>
+            <div class="navbar-item icon-text">
+              <span class="icon">
+                <i class="fas fa-brands fa-orcid"></i>
+              </span>
+              <a href="https://orcid.org/0000-0002-8021-7263">orcid.org</a>
+            </div>
+
           </div>
         </div>
-      </section>
-    </div>
-    
-    <div class="column">
-
-      <section id="aboutme" class="section">
-        <h1 class="title">Hi, I'm Migdał</h1>
-        <div class="content has-text-justified">
-        <p>
-            I am a dedicated bioinformatician and programmer. I have a deep interest 
-            in using machine learning techniques to unlock insights hidden in 
-            high-throughput data. I specialize in processing and analyzing 
-            Next-Generation Sequencing (NGS) data, especially those derived from 
-            experiments like ATAC-seq and RNA-seq. Driven by a passion to innovate, 
-            I enjoy expanding my skills to use and understand emerging technologies.
-        </p>
-        <p>
-            Currently, I am at the culmination of a journey to obtain a PhD degree in 
-            molecular biology at the <a href="zdglab.iimcb.gov.pl">IIMCB</a>. 
-            My research focuses on the dynamics of gene regulation during heart development 
-            <i>in vivo</i>.
-        </p>
-        <p>
-            Beyond my academic pursuits, I engage in diverse projects and consultancy work.
-            I am proficient in R and Python programming and have experience in developing 
-            data analysis workflows. My expertise extends to Linux server administration, 
-            web application development, Excel automation, Raspberry Pi projects, and much more.
-        </p>
-        <p>
+     </div>
+     </div>
+     <div class="hero-body">
+       <div class="container">
+         <p class="has-text-centered">Hi I am <span class="title is-large">Maciej Migdał</span>,</p>
+         </br>
+         <p class="has-text-justified">
+            a bioinformatician and a programmer, working on problems
+            of various difficulties, be it file processing automation or gene
+            expression modeling. I specialize in processing and analyzing
+            Next-Generation Sequencing (NGS) data, such as RNA-seq. My expertise 
+            extends to Linux server administration, web application development, 
+            Excel automation, Raspberry Pi projects, and more!
+         </p>
+         </br>
+         <p>
             If you face a challenge which requires a blend of technical expertise and biological
-            insight, or if you need assistance in IT-related areas, do not hesitate to contact me.
-        </p>
-        </div>
-      </section>
+            insight, or you need an assistance in IT-related areas, do not hesitate to contact me.
+         </p>
 
-      <section id="projects" class="section">
-        <h1 class="title">Open source projects</h1>
+       </div>
+   </section>
 
-        <div class="tile is-ancestor">
-          <div class="tile is-parent is-vertical">
+   <!-- dekorator -->
+   <section
+       class="section is-small has-bg-img"
+       style="background-image: url('rect5216_horizontal.png'); background-size: contain;"
+   >
+   </section>
 
-          <article id="xcore" class="tile is-child box is-clickable" 
-              onclick="window.open('https://bkaczkowski.github.io/xcore/', '_blank')">
-            <p class="title">xcore</p>
-            <p class="subtitle">an R package for inference of gene expression regulators</p>
-            <div class="content has-text-justified"
-              <p class="has-text-justified">
-                xcore is an R package for transcription factor activity modeling 
-                based on known molecular signatures and user's gene expression 
-                data. Accompanying <em>xcoredata</em> package provides a collection of 
-                molecular signatures, constructed from publicly available 
-                ChiP-seq experiments.
-              </p>
-            </div>
-            <figure class="image">
-              <img src="https://bkaczkowski.github.io/xcore/articles/flowchart.png"
-                   alt="xcore workflow"
-              >
-            </figure>
-          </article>
+   <section id="projects" class="section">
+     <h1 class="title">Open source projects</h1>
 
-          <article id="sumsamstats" class="tile is-child box is-clickable" 
-              onclick="window.open('https://github.com/mcjmigdal/sumsamstats', '_blank')">
-            <p class="title">sumsamstats</p>
-            <div class="content has-text-justified"
-              <p class="has-text-justified">
-                Parser and tools for summarising outputs of samtools stats, with ATAC-seq in mind.
-                Shipped together with a Shiny application to help visualize the outputs.
-              </p>
-            </div>
-          </article>
+     <div class="tile is-ancestor">
+       <div class="tile is-parent is-vertical">
 
-          <article id="RNA-seq_data_analysis_course_for_biologists_may_2018" class="tile is-child box is-clickable" 
-              onclick="window.open('https://github.com/mcjmigdal/RNA-seq_data_analysis_course_for_biologists_may_2018', '_blank')">
-            <p class="title">RNA-seq data analysis for biologists</p>
-            <div class="content has-text-justified"
-              <p class="has-text-justified">
-                RNA-seq workshop covering one of the simplest data analysis workflows, 
-                starting with data download and finishing at differential expression calling.
-              </p>
-            </div>
-          </article>
+       <article id="xcore" class="tile is-child box is-clickable"
+           onclick="window.open('https://bkaczkowski.github.io/xcore/', '_blank')">
+         <p class="title">xcore</p>
+         <p class="subtitle">an R package for inference of gene expression regulators</p>
+         <div class="content has-text-justified"
+           <p class="has-text-justified">
+             xcore is an R package for transcription factor activity modeling
+             based on known molecular signatures and user's gene expression
+             data. Accompanying <em>xcoredata</em> package provides a collection of
+             molecular signatures, constructed from publicly available
+             ChiP-seq experiments.
+           </p>
+         </div>
+         <figure class="image">
+           <img src="https://bkaczkowski.github.io/xcore/articles/flowchart.png"
+                alt="xcore workflow"
+           >
+         </figure>
+       </article>
 
-          <article id="wheatherstation" class="tile is-child box is-clickable" 
-              onclick="window.open('', '_blank')">
-            <p class="title">Wheather station</p>
-            <div class="content has-text-justified"
-              <p class="has-text-justified">
-                Mini-project
-              </p>
-            </div>
-          </article>
+       <article id="sumsamstats" class="tile is-child box is-clickable"
+           onclick="window.open('https://github.com/mcjmigdal/sumsamstats', '_blank')">
+         <p class="title">sumsamstats</p>
+         <div class="content has-text-justified"
+           <p class="has-text-justified">
+             Parser and tools for summarising outputs of samtools stats, with ATAC-seq in mind.
+             Shipped together with a Shiny application to help visualize the outputs.
+           </p>
+         </div>
+       </article>
 
-          </div>
+       <article id="RNA-seq_data_analysis_course_for_biologists_may_2018" class="tile is-child box is-clickable"
+           onclick="window.open('https://github.com/mcjmigdal/RNA-seq_data_analysis_course_for_biologists_may_2018', '_blank')">
+         <p class="title">RNA-seq data analysis for biologists</p>
+         <div class="content has-text-justified"
+           <p class="has-text-justified">
+             RNA-seq workshop covering one of the simplest data analysis workflows,
+             starting with data download and finishing at differential expression calling.
+           </p>
+         </div>
+       </article>
 
-          <div class="tile is-parent is-vertical">
+       <article id="wheatherstation" class="tile is-child box is-clickable"
+           onclick="window.open('', '_blank')">
+         <p class="title">Wheather station</p>
+         <div class="content has-text-justified"
+           <p class="has-text-justified">
+             Mini-project weather station build around BME280 sensor using ESP32
+             and E-Ink display.
+           </p>
+         </div>
+         <figure class="image is-flex is-justify-content-center">
+             <img src="https://github.com/mcjmigdal/weather-station-esp32/station.png"
+                  style="width: 50%; height: auto" alt=""
+             >
+         </figure>
+       </article>
 
-          <article id="midasHLA" class="tile is-child box is-clickable" 
-              onclick="window.open('https://genentech.github.io/MiDAS', '_blank')">
-            <p class="title">midasHLA</p>
-            <p class="subtitle">Meaningful Immunogenetic Data at Scale</p>
-            <div class="content has-text-justified"
-              <p>
-                midasHLA is an R package for statistical analysis of human 
-                immunogenetic variation in the form of HLA and KIR types.
-                The package enables association analysis and using immunogenetic 
-                data transformation functions for HLA amino acid fine mapping, 
-                analysis of HLA evolutionary divergence as well as HLA-KIR 
-                interactions. midasHLA closes the gap between inference of immunogenetic 
-                variation and its efficient utilization to make meaningful discoveries.
-              </p>
-            </div>
-            <figure class="image is-flex is-justify-content-center">
-                <img src="https://github.com/Genentech/midasHLA/raw/master/vignettes/MiDAS_logo.png"
-                     style="width: 50%; height: auto" alt="midasHLA logo"
-                >
-            </figure>
-          </article>
+       </div>
 
-          <article id="atacseq_pipeline" class="tile is-child box is-clickable" 
-              onclick="window.open('https://gitlab.com/zdglab/atacseq_pipeline', '_blank')">
-            <p class="title">ATAC-seq pipeline</p>
-            <div class="content has-text-justified"
-              <p>
-                Data analysis pipeline implemented in Nextflow. It starts with the raw FASTQ files 
-                and outputs peaks denoting nucleosome free regions toghether with count quantification. 
-                The pipeline supports peak calling using information from multiple replicates.
-              </p>
-            </div>
-          </article>
+       <div class="tile is-parent is-vertical">
 
-          <article id="shiitake" class="tile is-child box is-clickable" 
-              onclick="window.open('https://github.com/mcjmigdal/shiitake', '_blank')">
-            <p class="title">shiitake</p>
-            <div class="content has-text-justified"
-              <p>
-                Mini-project, automatizing Shiitake mushrooms growth monitoring 
-                using Raspberry Pi and Raspberry Pi Camera.
-              </p>
-            </div>
-            <figure class="image is-flex is-justify-content-center">
-                <img src="https://mcjmigdal.github.io/shiitake/data/img/2021-08-09_1407.jpg"
-                     style="width: 50%; height: auto;" alt="picture of shiitake mushrooms"
-                >
-            </figure>
-          </article>
+       <article id="midasHLA" class="tile is-child box is-clickable"
+           onclick="window.open('https://genentech.github.io/MiDAS', '_blank')">
+         <p class="title">midasHLA</p>
+         <p class="subtitle">Meaningful Immunogenetic Data at Scale</p>
+         <div class="content has-text-justified"
+           <p>
+             midasHLA is an R package for statistical analysis of human
+             immunogenetic variation in the form of HLA and KIR types.
+             The package enables association analysis and using immunogenetic
+             data transformation functions for HLA amino acid fine mapping,
+             analysis of HLA evolutionary divergence as well as HLA-KIR
+             interactions. midasHLA closes the gap between inference of immunogenetic
+             variation and its efficient utilization to make meaningful discoveries.
+           </p>
+         </div>
+         <figure class="image is-flex is-justify-content-center">
+             <img src="https://github.com/Genentech/midasHLA/raw/master/vignettes/MiDAS_logo.png"
+                  style="width: 50%; height: auto" alt="midasHLA logo"
+             >
+         </figure>
+       </article>
 
-          <article id="moma" class="tile is-child box is-clickable" 
-              onclick="window.open('', '_blank')">
-            <p class="title">MOtif MApper</p>
-            <div class="content has-text-justified"
-              <p>
-              </p>
-            </div>
-          </article>
+       <article id="atacseq_pipeline" class="tile is-child box is-clickable"
+           onclick="window.open('https://gitlab.com/zdglab/atacseq_pipeline', '_blank')">
+         <p class="title">ATAC-seq pipeline</p>
+         <div class="content has-text-justified"
+           <p>
+             Data analysis pipeline implemented in Nextflow. It starts with the raw FASTQ files
+             and outputs peaks denoting nucleosome free regions toghether with count quantification.
+             The pipeline supports peak calling using information from multiple replicates.
+           </p>
+         </div>
+       </article>
 
-          </div>
-        </div>
-      </section>
+       <article id="shiitake" class="tile is-child box is-clickable"
+           onclick="window.open('https://github.com/mcjmigdal/shiitake', '_blank')">
+         <p class="title">shiitake</p>
+         <div class="content has-text-justified"
+           <p>
+             Mini-project, automatizing Shiitake mushrooms growth monitoring
+             using Raspberry Pi and Raspberry Pi Camera.
+           </p>
+         </div>
+         <figure class="image is-flex is-justify-content-center">
+             <img src="https://raw.githubusercontent.com/mcjmigdal/shiitake/main/data/img/2021-08-09_1407.jpg"
+                  style="width: 50%; height: auto;" alt="picture of shiitake mushrooms"
+             >
+         </figure>
+       </article>
 
-      <section id="projects" class="section content">
-        <h1 class="title">Publications</h1>
-        <ul>
-          <ol><b>Migdał, M.</b>, Arakawa, T., Takizawa, S., Furuno, M., Suzuki, H., Arner, E., Winata, C.L., Kaczkowski, B. xcore: an R package for inference of gene expression regulators. BMC Bioinformatics. 2023. 24:14. doi: https://doi.org/10.1186/s12859-022-05084-0</ol>
-          <ol>Uszczynska-Ratajczak, B., Sugunan, S., Kwiatkowska, M., <b>Migdal, M.</b>, Carbonell-Sala, S., Sokol, A., Winata, C.L., Chacinska, A. Profiling subcellular localization of nuclear-encoded mitochondrial gene products in zebrafish. Life Sci. Alliance. 2022. 6:e202201514. doi: https://doi.org/10.26508/lsa.202201514</ol>
-          <ol><b>Migdał, M.</b>, Tralle, E., Abu Nahia, K., Bugajski, Ł., Kędzierska, K.Z., Garbicz, F., Piwocka, K., Winata, C.L., Pawlak, M. Multi-omics analyses of early liver injury reveals cell-type-specific transcriptional and epigenomic shift. BMC Genomics. 2021. 22:904. doi: https://doi.org/10.1186/s12864-021-08173-1</ol>
-          <ol>Abu Nahia, K., <b>Migdał, M.</b>, Quinn, T.A., Poon, K., Łapiński, M., Sulej, A., Liu, J., Mondal, S.S., Pawlak, M., Bugajski, Ł., Piwocka, K., Brand, T., Kohl, P., Korzh, V., Winata, C. Genomic and physiological analyses of the zebrafish atrioventricular canal reveal molecular building blocks of the secondary pacemaker region. Cell. Mol. Life Sci.. 2021. 78:6669-6687. doi: https://doi.org/10.1007/s00018-021-03939-y</ol>
-          <ol><b>Migdal, M.</b>, Ruan, D.F., Forrest, W.F., Horowitz, A., Hammer, C. MiDAS—Meaningful Immunogenetic Data at Scale. PLoS Comput Biol. 2021. 17:e1009131. doi: https://doi.org/10.1371/journal.pcbi.1009131</ol>
-          <ol>Pawlak, M., Kedzierska, K.Z., <b>Migdal, M.</b>, Nahia, K.A., Ramilowski, J.A., Bugajski, L., Hashimoto, K., Marconi, A., Piwocka, K., Carninci, P., Winata, C.L. Dynamics of cardiomyocyte transcriptome and chromatin landscape demarcates key events of heart development. Genome Res.. 2019. 29:506-519. doi: https://doi.org/10.1101/gr.244491.118</ol>
-        </ul>
-      </section>
+       </div>
+     </div>
+   </section>
+
+   <!-- dekorator -->
+   <section
+       class="section is-small has-bg-img"
+       style="background-image: url('rect5216_horizontal.png'); background-size: contain;"
+   >
+   </section>
+
+   <section id="publications" class="section content">
+     <h1 class="title">Publications</h1>
+     <ul>
+       <ol><b>Migdał, M.</b>, Arakawa, T., Takizawa, S., Furuno, M., Suzuki, H., Arner, E., Winata, C.L., Kaczkowski, B. xcore: an R package for inference of gene expression regulators. BMC Bioinformatics. 2023. 24:14. doi: https://doi.org/10.1186/s12859-022-05084-0</ol>
+       <ol>Uszczynska-Ratajczak, B., Sugunan, S., Kwiatkowska, M., <b>Migdal, M.</b>, Carbonell-Sala, S., Sokol, A., Winata, C.L., Chacinska, A. Profiling subcellular localization of nuclear-encoded mitochondrial gene products in zebrafish. Life Sci. Alliance. 2022. 6:e202201514. doi: https://doi.org/10.26508/lsa.202201514</ol>
+       <ol><b>Migdał, M.</b>, Tralle, E., Abu Nahia, K., Bugajski, Ł., Kędzierska, K.Z., Garbicz, F., Piwocka, K., Winata, C.L., Pawlak, M. Multi-omics analyses of early liver injury reveals cell-type-specific transcriptional and epigenomic shift. BMC Genomics. 2021. 22:904. doi: https://doi.org/10.1186/s12864-021-08173-1</ol>
+       <ol>Abu Nahia, K., <b>Migdał, M.</b>, Quinn, T.A., Poon, K., Łapiński, M., Sulej, A., Liu, J., Mondal, S.S., Pawlak, M., Bugajski, Ł., Piwocka, K., Brand, T., Kohl, P., Korzh, V., Winata, C. Genomic and physiological analyses of the zebrafish atrioventricular canal reveal molecular building blocks of the secondary pacemaker region. Cell. Mol. Life Sci.. 2021. 78:6669-6687. doi: https://doi.org/10.1007/s00018-021-03939-y</ol>
+       <ol><b>Migdal, M.</b>, Ruan, D.F., Forrest, W.F., Horowitz, A., Hammer, C. MiDAS—Meaningful Immunogenetic Data at Scale. PLoS Comput Biol. 2021. 17:e1009131. doi: https://doi.org/10.1371/journal.pcbi.1009131</ol>
+       <ol>Pawlak, M., Kedzierska, K.Z., <b>Migdal, M.</b>, Nahia, K.A., Ramilowski, J.A., Bugajski, L., Hashimoto, K., Marconi, A., Piwocka, K., Carninci, P., Winata, C.L. Dynamics of cardiomyocyte transcriptome and chromatin landscape demarcates key events of heart development. Genome Res.. 2019. 29:506-519. doi: https://doi.org/10.1101/gr.244491.118</ol>
+     </ul>
+   </section>
     </div>
   </div>
 
